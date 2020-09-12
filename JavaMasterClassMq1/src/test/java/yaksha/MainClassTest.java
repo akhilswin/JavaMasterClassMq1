@@ -5,7 +5,20 @@ import static yaksha.TestUtils.currentTest;
 import static yaksha.TestUtils.yakshaAssert;
 import org.junit.jupiter.api.Test;
 
-class MainClassTest {
+class MainClassTest { 
+	
+	@Test
+	public void testExceptionConditon() throws Exception {
+
+		TestUtils.yakshaAssert(TestUtils.currentTest(), true, TestUtils.boundaryTestFile);
+	}
+
+	@Test
+	public void testBoundaryCondition() throws Exception {
+
+		TestUtils.yakshaAssert(TestUtils.currentTest(), true, TestUtils.exceptionTestFile);
+	}
+
 	@Test
 	void testHighestScorer() throws Exception {
 		// Test will pass
@@ -20,4 +33,5 @@ class MainClassTest {
 		}
 	}
 }
+
 
